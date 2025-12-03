@@ -87,6 +87,7 @@
       <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/service/MesaService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mesa-service/src/main/resources/application.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/mesa-service/src/test/java/com/saborgourmet/mesaservice/MesaServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,8 +102,20 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/mesa-service" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "GeraldineSolis"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/GeraldineSolis/sabor-gourmet.git",
+    "accountId": "22c19e84-0fa9-4b53-b965-50b3f3eb030a"
+  }
+}]]></component>
   <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
   <component name="KubernetesApiProvider"><![CDATA[{
   "isMigrated": true
@@ -156,6 +169,13 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.SaborGourmetMicroservicesApplication">
+    <configuration name="AuditServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="audit-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.saborgourmet.auditservice.AuditServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="auth-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.saborgourmet.auditservice.AuthServiceApplication" />
@@ -202,7 +222,7 @@
       <updated>1764727274535</updated>
       <workItem from="1764727276705" duration="350000" />
       <workItem from="1764727775138" duration="113000" />
-      <workItem from="1764732926827" duration="3261000" />
+      <workItem from="1764732926827" duration="4107000" />
     </task>
     <servers />
   </component>
