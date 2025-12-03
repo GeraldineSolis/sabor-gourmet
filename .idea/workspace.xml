@@ -5,89 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="613fe8b8-8a78-41b7-a5c2-06fa95184381" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/auth-service/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/AuthServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/config/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/config/OpenAPIConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/controller/UsuarioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/dto/AuthRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/dto/AuthResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/dto/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/dto/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/entity/Rol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/entity/Usuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/exception/UsernameAlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/repository/UsuarioRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/service/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/service/CustomUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/test/java/com/saborgourmet/auditservice/AuthServiceApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/ClienteServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/config/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/config/OpenAPIConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/controller/ClienteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/dto/ClienteRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/dto/ClienteResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/dto/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/entity/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/exception/DniAlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/repository/ClienteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/service/ClienteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cliente-service/src/test/java/com/saborgourmet/clienteservice/ClienteServiceApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/MesaServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/config/JwtUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/config/OpenAPIConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/controller/AsignacionMesaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/controller/MesaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/dto/AsignacionMesaRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/dto/AsignacionMesaResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/dto/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/dto/MesaRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/dto/MesaResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/entity/AsignacionMesa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/entity/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/entity/EstadoMesa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/entity/Mesa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/exception/MesaNoDisponibleException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/exception/NumeroMesaAlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/repository/AsignacionMesaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/repository/MesaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/security/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/service/AsignacionMesaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/service/MesaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mesa-service/src/test/java/com/saborgourmet/mesaservice/MesaServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/audit-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/saborgourmet/auditservice/config/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/saborgourmet/auditservice/config/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audit-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,33 +25,39 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/mesa-service" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "GeraldineSolis"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;GeraldineSolis&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/GeraldineSolis/sabor-gourmet.git",
-    "accountId": "22c19e84-0fa9-4b53-b965-50b3f3eb030a"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/GeraldineSolis/sabor-gourmet.git&quot;,
+    &quot;accountId&quot;: &quot;22c19e84-0fa9-4b53-b965-50b3f3eb030a&quot;
   }
-}]]></component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
       </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="jdkForImporter" value="ms-17" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectColorInfo">{
@@ -138,9 +71,17 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.AuditServiceApplication.executor": "Run",
+    "Spring Boot.AuthServiceApplication.executor": "Run",
+    "Spring Boot.ClienteServiceApplication.executor": "Run",
+    "Spring Boot.MesaServiceApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/daweb/sermana16/sabor-gourmet-microservices",
@@ -149,7 +90,11 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -167,18 +112,47 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
+    <option name="hiddenConfigurations">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <set>
+              <option value="SaborGourmetMicroservicesApplication" />
+            </set>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="AuthServiceApplication" value="FAILED" />
+              <entry key="ClienteServiceApplication" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SaborGourmetMicroservicesApplication">
-    <configuration name="AuditServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.AuditServiceApplication">
+    <configuration name="AuditServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="audit-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.saborgourmet.auditservice.AuditServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.saborgourmet.auditservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="auth-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.saborgourmet.auditservice.AuthServiceApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.saborgourmet.authservice.AuthServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -198,12 +172,23 @@
       </method>
     </configuration>
     <configuration name="SaborGourmetMicroservicesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="sabor-gourmet-microservices" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.saborgourmet.authservice.saborgourmetmicroservices.SaborGourmetMicroservicesApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.AuthServiceApplication" />
+      <item itemvalue="Spring Boot.ClienteServiceApplication" />
+      <item itemvalue="Spring Boot.MesaServiceApplication" />
+      <item itemvalue="Spring Boot.SaborGourmetMicroservicesApplication" />
+      <item itemvalue="Spring Boot.AuditServiceApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.AuditServiceApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -222,7 +207,9 @@
       <updated>1764727274535</updated>
       <workItem from="1764727276705" duration="350000" />
       <workItem from="1764727775138" duration="113000" />
-      <workItem from="1764732926827" duration="4107000" />
+      <workItem from="1764732926827" duration="4579000" />
+      <workItem from="1764737535365" duration="2096000" />
+      <workItem from="1764739663415" duration="3035000" />
     </task>
     <servers />
   </component>

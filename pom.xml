@@ -14,8 +14,8 @@
     <groupId>com.saborgourmet</groupId>
     <artifactId>saborgourmet-microservices</artifactId>
     <version>1.0.0</version>
-    <packaging>pom</packaging>
-    <name>sabor-gourmet-microservices</name>
+    <packaging>pom</packaging> <name>sabor-gourmet-microservices</name>
+    <description>Proyecto Raíz para Microservicios de Sabor Gourmet</description>
 
     <properties>
         <java.version>17</java.version>
@@ -51,7 +51,6 @@
                 <version>${jjwt.version}</version>
                 <scope>runtime</scope>
             </dependency>
-
             <dependency>
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
@@ -59,5 +58,4 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
 </project>
