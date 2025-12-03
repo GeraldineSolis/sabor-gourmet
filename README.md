@@ -445,6 +445,34 @@ railway init
 railway up
 ```
 
+# 🎨 Frontend - Sabor Gourmet (React)
+
+Aplicación web moderna desarrollada con **React + Vite**, diseñada para consumir los microservicios del sistema Sabor Gourmet. Incluye gestión de estado con Context API y enrutamiento protegido.
+
+## 📂 Estructura de Archivos para Docker
+
+Para desplegar el frontend en un contenedor, necesitamos dos archivos en la raíz del proyecto `sabor-gourmet-front/`:
+
+### 1. `nginx.conf`
+*Este archivo es necesario para que Nginx maneje correctamente el enrutamiento de React Router (evita errores 404 al recargar la página).*
+
+```nginx
+server {
+    listen 80;
+    
+    location / {
+        root   /usr/share/nginx/html;
+        index  index.html index.htm;
+        # Esta línea es la magia: si no encuentra el archivo, sirve index.html
+        try_files $uri $uri/ /index.html;
+    }
+
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+}
+
 ### Render
 
 1. Conectar repositorio de GitHub

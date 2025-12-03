@@ -1,0 +1,14 @@
+.audit-log {
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+.badge-action {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+}
+.bg-create { background-color: #10b981; }
+.bg-update { background-color: #3b82f6; }
+.bg-delete { background-color: #ef4444; }
+.bg-default { background-color: #6b7280; }

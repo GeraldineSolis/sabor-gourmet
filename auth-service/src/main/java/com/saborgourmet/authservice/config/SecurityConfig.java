@@ -17,6 +17,11 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+
+import java.util.List;
 
 @Configuration
 @EnableWebSecurity
@@ -31,55 +36,58 @@ public class SecurityConfig {
         this.jwtAuthFilter = jwtAuthFilter;
     }
 
-    // 1. Configuración de la cadena de filtros de seguridad
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                // Deshabilitar CSRF (No es necesario para APIs REST con JWT)
+                // 1. AQUI ACTIVAMOS CORS CON NUESTRA CONFIGURACIÓN
+                .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .csrf(AbstractHttpConfigurer::disable)
-
-                // Configurar rutas públicas y privadas
                 .authorizeHttpRequests(auth -> auth
-                        // PERMITIR TODO EL ACCESO a las rutas de autenticación (Login, Registro, Validar)
                         .requestMatchers("/api/auth/**").permitAll()
-
-                        // PERMITIR TODO EL ACCESO a la documentación de Swagger/OpenAPI
                         .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
-
-                        // RESTRINGIR el endpoint de crear usuarios (Opcional, si quieres que solo ADMIN cree usuarios manualmente fuera del registro)
-                        // .requestMatchers(HttpMethod.POST, "/api/usuarios").hasRole("ADMIN")
-
-                        // CUALQUIER OTRA SOLICITUD requiere estar autenticado
                         .anyRequest().authenticated()
                 )
-
-                // Configurar sesión sin estado (Stateless) porque usamos JWT
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )
-
-                // Agregar el proveedor de autenticación
                 .authenticationProvider(authenticationProvider())
-
-                // Agregar nuestro filtro JWT antes del filtro estándar de usuario/pass
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
 
-    // 2. Configuración del encriptador de contraseñas (BCrypt)
+    // 2. DEFINIMOS QUÉ ORIGENES ESTÁN PERMITIDOS
+    @Bean
+    public CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration configuration = new CorsConfiguration();
+
+        // Permitir el origen de tu Frontend (React/Vite)
+        configuration.setAllowedOrigins(List.of("http://localhost:5173"));
+
+        // Permitir los métodos HTTP necesarios
+        configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"));
+
+        // Permitir cabeceras (especialmente Authorization para el token)
+        configuration.setAllowedHeaders(List.of("Authorization", "Content-Type"));
+
+        // Permitir credenciales (cookies/auth headers)
+        configuration.setAllowCredentials(true);
+
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration);
+        return source;
+    }
+
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
-    // 3. Configuración del AuthenticationManager (necesario para el Login)
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
         return config.getAuthenticationManager();
     }
 
-    // 4. Configuración del proveedor de autenticación (conecta UserDetails con PasswordEncoder)
     @Bean
     public AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();

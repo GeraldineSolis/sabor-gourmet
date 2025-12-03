@@ -5,6 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="613fe8b8-8a78-41b7-a5c2-06fa95184381" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/sabor-gourmet-front/sabor-gourmet-front/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sabor-gourmet-front/sabor-gourmet-front/src/assets/styles/variables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sabor-gourmet-front/sabor-gourmet-front/src/context/AuthContext.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sabor-gourmet-front/sabor-gourmet-front/src/pages/Audit/Audit.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sabor-gourmet-front/sabor-gourmet-front/src/pages/Audit/Audit.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sabor-gourmet-front/sabor-gourmet-front/src/pages/Clientes/Clientes.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sabor-gourmet-front/sabor-gourmet-front/src/pages/Clientes/Clientes.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sabor-gourmet-front/sabor-gourmet-front/src/pages/Login/Login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sabor-gourmet-front/sabor-gourmet-front/src/pages/Login/Login.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sabor-gourmet-front/sabor-gourmet-front/src/services/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sabor-gourmet-front/sabor-gourmet-front/src/services/authService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sabor-gourmet-front/sabor-gourmet-front/src/services/clienteService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -17,6 +29,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="JSX File" />
         <option value="Dockerfile" />
       </list>
     </option>
@@ -77,6 +92,7 @@
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/daweb/sermana16/sabor-gourmet-microservices",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -93,6 +109,11 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\daweb\sermana16\sabor-gourmet-microservices" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\daweb\sermana16\sabor-gourmet-microservices" />
+      <recent name="C:\daweb\sermana16\sabor-gourmet-microservices\sabor-gourmet-front\sabor-gourmet-front" />
+      <recent name="C:\daweb\sermana16\sabor-gourmet-microservices1" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -203,7 +224,7 @@
       <workItem from="1764727775138" duration="113000" />
       <workItem from="1764732926827" duration="4579000" />
       <workItem from="1764737535365" duration="2096000" />
-      <workItem from="1764739663415" duration="6598000" />
+      <workItem from="1764739663415" duration="9691000" />
     </task>
     <servers />
   </component>
