@@ -402,6 +402,30 @@ curl -X GET http://localhost:8082/api/clientes \
     - `audit_url`: http://localhost:8084
 3. Ejecutar las peticiones en orden
 
+## 🔐 Flujo de Autenticación y Uso del Token
+
+Este sistema requiere un **JWT (JSON Web Token)** para acceder a los *endpoints* protegidos. Sigue estos pasos para obtener y usar el token.
+
+### 1. Obtener el Token (Login)
+
+Realiza una petición `POST` al *endpoint* de autenticación.
+
+#### Usando `curl`
+
+```bash
+# Reemplaza 'usuario' y 'contraseña' con tus credenciales
+RESPONSE=$(curl -s -X POST http://localhost:8081/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{
+    "username": "usuario",
+    "password": "contraseña"
+  }')
+
+# Opcional: Extraer el token de la respuesta JSON y asignarlo a una variable de entorno
+TOKEN=$(echo "$RESPONSE" | grep -o '"token":"[^"]*"' | sed 's/"token":"//;s/"//')
+
+echo "Token obtenido y guardado en \$TOKEN: $TOKEN"
+
 ---
 
 ## 🌐 Despliegue

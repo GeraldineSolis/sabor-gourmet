@@ -1,0 +1,379 @@
+{
+  "info": {
+    "_postman_id": "sabor-gourmet-id",
+    "name": "Sabor Gourmet Microservices",
+    "description": "Colección completa para probar el ecosistema de microservicios de Sabor Gourmet.\n\nIncluye:\n- Auth Service (8081)\n- Cliente Service (8082)\n- Mesa Service (8083)\n- Audit Service (8084)\n\n**Instrucciones:**\n1. Ejecute 'Registrar Admin' (una sola vez).\n2. Ejecute 'Login'. El token se guardará automáticamente.\n3. Pruebe el resto de endpoints.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Auth Service (8081)",
+      "item": [
+        {
+          "name": "Registrar Admin",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombreCompleto\": \"Administrador Sistema\",\n  \"username\": \"admin\",\n  \"password\": \"admin123\",\n  \"rol\": \"ADMIN\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url_auth}}/api/auth/register",
+              "host": [
+                "{{base_url_auth}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login (Auto-Save Token)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();",
+                  "if (jsonData.token) {",
+                  "    pm.environment.set(\"jwt_token\", jsonData.token);",
+                  "    console.log(\"Token JWT guardado exitosamente en variable de entorno\");",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"admin123\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url_auth}}/api/auth/login",
+              "host": [
+                "{{base_url_auth}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Validar Token",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url_auth}}/api/auth/validate",
+              "host": [
+                "{{base_url_auth}}"
+              ],
+              "path": [
+                "api",
+                "auth",
+                "validate"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "2. Cliente Service (8082)",
+      "item": [
+        {
+          "name": "Crear Cliente",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombres\": \"Juan\",\n  \"apellidos\": \"Pérez\",\n  \"dni\": \"10203040\",\n  \"email\": \"juan.perez@email.com\",\n  \"telefono\": \"999888777\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url_cliente}}/api/clientes",
+              "host": [
+                "{{base_url_cliente}}"
+              ],
+              "path": [
+                "api",
+                "clientes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Listar Clientes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url_cliente}}/api/clientes",
+              "host": [
+                "{{base_url_cliente}}"
+              ],
+              "path": [
+                "api",
+                "clientes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar por DNI",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url_cliente}}/api/clientes/dni/10203040",
+              "host": [
+                "{{base_url_cliente}}"
+              ],
+              "path": [
+                "api",
+                "clientes",
+                "dni",
+                "10203040"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "3. Mesa Service (8083)",
+      "item": [
+        {
+          "name": "Crear Mesa",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"numeroMesa\": \"T-01\",\n  \"capacidad\": 4,\n  \"ubicacion\": \"Terraza\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url_mesa}}/api/mesas",
+              "host": [
+                "{{base_url_mesa}}"
+              ],
+              "path": [
+                "api",
+                "mesas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Listar Mesas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url_mesa}}/api/mesas",
+              "host": [
+                "{{base_url_mesa}}"
+              ],
+              "path": [
+                "api",
+                "mesas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Asignar Mesa (Ocupar)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idMesa\": 1,\n  \"idCliente\": 1,\n  \"cantidadComensales\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url_mesa}}/api/asignaciones",
+              "host": [
+                "{{base_url_mesa}}"
+              ],
+              "path": [
+                "api",
+                "asignaciones"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Finalizar Asignación (Liberar)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{base_url_mesa}}/api/asignaciones/1/finalizar",
+              "host": [
+                "{{base_url_mesa}}"
+              ],
+              "path": [
+                "api",
+                "asignaciones",
+                "1",
+                "finalizar"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "4. Audit Service (8084)",
+      "item": [
+        {
+          "name": "Registrar Evento (Simulado)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"test_user\",\n  \"accion\": \"TEST\",\n  \"entidad\": \"PRUEBA\",\n  \"detalle\": \"Prueba desde Postman\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url_audit}}/api/bitacora",
+              "host": [
+                "{{base_url_audit}}"
+              ],
+              "path": [
+                "api",
+                "bitacora"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Listar Bitácora",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url_audit}}/api/bitacora",
+              "host": [
+                "{{base_url_audit}}"
+              ],
+              "path": [
+                "api",
+                "bitacora"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{jwt_token}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url_auth",
+      "value": "http://localhost:8081",
+      "type": "string"
+    },
+    {
+      "key": "base_url_cliente",
+      "value": "http://localhost:8082",
+      "type": "string"
+    },
+    {
+      "key": "base_url_mesa",
+      "value": "http://localhost:8083",
+      "type": "string"
+    },
+    {
+      "key": "base_url_audit",
+      "value": "http://localhost:8084",
+      "type": "string"
+    },
+    {
+      "key": "jwt_token",
+      "value": "",
+      "type": "string"
+    }
+  ]
+}

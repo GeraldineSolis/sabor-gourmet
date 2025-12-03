@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="613fe8b8-8a78-41b7-a5c2-06fa95184381" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/audit-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/java/com/saborgourmet/auditservice/config/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/java/com/saborgourmet/auditservice/config/JwtUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audit-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/audit-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,8 +120,10 @@
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
-              <entry key="AuthServiceApplication" value="FAILED" />
+              <entry key="AuditServiceApplication" value="STOPPED" />
+              <entry key="AuthServiceApplication" value="STOPPED" />
               <entry key="ClienteServiceApplication" value="STOPPED" />
+              <entry key="MesaServiceApplication" value="STOPPED" />
             </map>
           </value>
         </entry>
@@ -209,7 +203,7 @@
       <workItem from="1764727775138" duration="113000" />
       <workItem from="1764732926827" duration="4579000" />
       <workItem from="1764737535365" duration="2096000" />
-      <workItem from="1764739663415" duration="3035000" />
+      <workItem from="1764739663415" duration="6598000" />
     </task>
     <servers />
   </component>

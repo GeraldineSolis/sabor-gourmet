@@ -18,8 +18,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import static org.springframework.security.web.util.matcher.AntPathRequestMatcher.antMatcher;
-
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity(prePostEnabled = true)
@@ -33,51 +31,60 @@ public class SecurityConfig {
         this.jwtAuthFilter = jwtAuthFilter;
     }
 
-    // Configuración del Encoder (BCrypt)
+    // 1. Configuración de la cadena de filtros de seguridad
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http
+                // Deshabilitar CSRF (No es necesario para APIs REST con JWT)
+                .csrf(AbstractHttpConfigurer::disable)
+
+                // Configurar rutas públicas y privadas
+                .authorizeHttpRequests(auth -> auth
+                        // PERMITIR TODO EL ACCESO a las rutas de autenticación (Login, Registro, Validar)
+                        .requestMatchers("/api/auth/**").permitAll()
+
+                        // PERMITIR TODO EL ACCESO a la documentación de Swagger/OpenAPI
+                        .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
+
+                        // RESTRINGIR el endpoint de crear usuarios (Opcional, si quieres que solo ADMIN cree usuarios manualmente fuera del registro)
+                        // .requestMatchers(HttpMethod.POST, "/api/usuarios").hasRole("ADMIN")
+
+                        // CUALQUIER OTRA SOLICITUD requiere estar autenticado
+                        .anyRequest().authenticated()
+                )
+
+                // Configurar sesión sin estado (Stateless) porque usamos JWT
+                .sessionManagement(session -> session
+                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                )
+
+                // Agregar el proveedor de autenticación
+                .authenticationProvider(authenticationProvider())
+
+                // Agregar nuestro filtro JWT antes del filtro estándar de usuario/pass
+                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
+
+        return http.build();
+    }
+
+    // 2. Configuración del encriptador de contraseñas (BCrypt)
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
-    // Configuración del Authentication Manager (para login)
+    // 3. Configuración del AuthenticationManager (necesario para el Login)
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
         return config.getAuthenticationManager();
     }
 
-    // Configuración del Authentication Provider
+    // 4. Configuración del proveedor de autenticación (conecta UserDetails con PasswordEncoder)
     @Bean
     public AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
         authProvider.setUserDetailsService(userDetailsService);
         authProvider.setPasswordEncoder(passwordEncoder());
         return authProvider;
-    }
-
-    // Cadena de Filtros de Seguridad
-    @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http
-                .csrf(AbstractHttpConfigurer::disable) // Deshabilitar CSRF (común en APIs stateless)
-                .authorizeHttpRequests(auth -> auth
-                        // Endpoints públicos para autenticación y documentación
-                        .requestMatchers(antMatcher("/api/auth/**")).permitAll()
-                        .requestMatchers(antMatcher("/v3/api-docs/**")).permitAll()
-                        .requestMatchers(antMatcher("/swagger-ui/**")).permitAll()
-
-                        // Endpoints de gestión de usuarios (solo ADMIN)
-                        .requestMatchers(antMatcher("/api/usuarios/**")).hasRole("ADMIN")
-
-                        // Denegar el resto por defecto
-                        .anyRequest().authenticated()
-                )
-                .sessionManagement(session -> session
-                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS) // Sesiones sin estado (para JWT)
-                )
-                .authenticationProvider(authenticationProvider())
-                // Añadir el filtro JWT antes del filtro de usuario/password
-                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
-
-        return http.build();
     }
 }
