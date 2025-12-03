@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="613fe8b8-8a78-41b7-a5c2-06fa95184381" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/auth-service/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/AuthServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/config/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/config/OpenAPIConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/controller/UsuarioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/dto/AuthRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/dto/AuthResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/dto/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/dto/RegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/entity/Rol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/entity/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/exception/UsernameAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/repository/UsuarioRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/service/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/saborgourmet/auditservice/service/CustomUserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/test/java/com/saborgourmet/auditservice/AuthServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/ClienteServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/config/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/config/OpenAPIConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/controller/ClienteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/dto/ClienteRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/dto/ClienteResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/dto/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/entity/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/exception/DniAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/repository/ClienteRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/java/com/saborgourmet/clienteservice/service/ClienteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cliente-service/src/test/java/com/saborgourmet/clienteservice/ClienteServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/MesaServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/config/JwtUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/config/OpenAPIConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/controller/AsignacionMesaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/controller/MesaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/dto/AsignacionMesaRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/dto/AsignacionMesaResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/dto/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/dto/MesaRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/dto/MesaResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/entity/AsignacionMesa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/entity/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/entity/EstadoMesa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/entity/Mesa.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/exception/MesaNoDisponibleException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/exception/NumeroMesaAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/repository/AsignacionMesaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/repository/MesaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/security/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/service/AsignacionMesaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/java/com/saborgourmet/mesaservice/service/MesaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mesa-service/src/test/java/com/saborgourmet/mesaservice/MesaServiceApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="36JakP1IJAUqYjvzgMith8J13B2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/daweb/sermana16/sabor-gourmet-microservices",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\daweb\sermana16\sabor-gourmet-microservices" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SaborGourmetMicroservicesApplication">
+    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="auth-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.saborgourmet.auditservice.AuthServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="cliente-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.saborgourmet.clienteservice.ClienteServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MesaServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="mesa-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.saborgourmet.mesaservice.MesaServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SaborGourmetMicroservicesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="sabor-gourmet-microservices" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.saborgourmet.authservice.saborgourmetmicroservices.SaborGourmetMicroservicesApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="613fe8b8-8a78-41b7-a5c2-06fa95184381" name="Changes" comment="" />
+      <created>1764727274535</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764727274535</updated>
+      <workItem from="1764727276705" duration="350000" />
+      <workItem from="1764727775138" duration="113000" />
+      <workItem from="1764732926827" duration="3261000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
